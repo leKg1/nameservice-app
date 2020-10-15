@@ -2,8 +2,6 @@ package types
 
 import "strings"
 
-const QueryListName = "list-name"
-const QueryGetName = "get-name"
 const QueryListWhois = "list-whois"
 const QueryGetWhois = "get-whois"
 const QueryResolveName = "resolve-name"

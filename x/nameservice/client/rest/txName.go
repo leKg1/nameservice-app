@@ -73,7 +73,7 @@ func setWhoisHandler(cliCtx context.CLIContext) http.HandlerFunc {
 			rest.WriteErrorResponse(w, http.StatusBadRequest, err.Error())
 			return
 		}
-		msg := types.NewMsgSetName(req.Value, req.Name, addr)
+		msg := types.NewMsgSetName(addr, req.Value, req.Name)
 
 		err = msg.ValidateBasic()
 		if err != nil {

@@ -52,7 +52,7 @@ func GetCmdSetWhois(cdc *codec.Codec) *cobra.Command {
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
 			inBuf := bufio.NewReader(cmd.InOrStdin())
 			txBldr := auth.NewTxBuilderFromCLI(inBuf).WithTxEncoder(utils.GetTxEncoder(cdc))
-			msg := types.NewMsgSetName(argsValue, argsName, cliCtx.GetFromAddress())
+			msg := types.NewMsgSetName(cliCtx.GetFromAddress(), argsValue, argsName)
 			err := msg.ValidateBasic()
 			if err != nil {
 				return err

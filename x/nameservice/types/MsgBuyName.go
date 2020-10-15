@@ -5,8 +5,6 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 )
 
-var _ sdk.Msg = &MsgBuyName{}
-
 // MsgBuyName defines the BuyName message
 type MsgBuyName struct {
 	Name  string         `json:"name"`
